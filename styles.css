@@ -1,0 +1,69 @@
+:root {
+  color-scheme: light dark;
+  --canvas: #f6f1e7;
+  --surface: #fffdf8;
+  --ink: #17201d;
+  --muted: #5d6963;
+  --action: #b0330c;
+  --ready: #004740;
+  --line: color-mix(in srgb, var(--ink) 16%, transparent);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+header, main, footer {
+  width: min(760px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+header { padding: 48px 0 20px; }
+main { padding-bottom: 48px; }
+footer {
+  border-top: 1px solid var(--line);
+  padding: 24px 0 40px;
+  color: var(--muted);
+}
+
+.brand {
+  color: var(--ready);
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+h1, h2 { line-height: 1.2; }
+h1 { margin: 10px 0; font-size: clamp(2rem, 7vw, 3.4rem); }
+h2 { margin-top: 2rem; }
+
+.lede { color: var(--muted); font-size: 1.15rem; }
+.card {
+  margin: 22px 0;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+a { color: var(--action); font-weight: 650; }
+nav { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 22px; }
+li + li { margin-top: .5rem; }
+code { overflow-wrap: anywhere; }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #111513;
+    --surface: #1c2320;
+    --ink: #f4f1e9;
+    --muted: #b9c2bd;
+    --action: #ff6e38;
+    --ready: #5cd6c7;
+  }
+}
