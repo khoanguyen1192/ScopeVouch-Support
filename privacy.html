@@ -10,7 +10,7 @@
   <header>
     <div class="brand">ScopeVouch &amp; QuoteProof</div>
     <h1>Privacy Policy</h1>
-    <p class="lede">Effective October 12, 2026</p>
+    <p class="lede">Effective October 13, 2026</p>
     <nav aria-label="Support pages"><a href="index.html">Support</a><a href="terms.html">Terms of Use</a></nav>
   </header>
   <main>
@@ -29,6 +29,9 @@
     <h2>Device verification and service security</h2>
     <p>When requesting AI, the app uses Apple's App Attest service to verify that it is a genuine instance of this app. Apple handles that verification under its own privacy practices. Our backend keeps a hash of the app's opaque verification key identifier, its public key, an assertion counter, last-use time, hashed short-lived session credentials and request counts. These records help authenticate requests, prevent replay and limit abuse. They are not an Apple Account identifier, advertising identifier or a copy of your business records.</p>
     <p>Verification challenges expire after two minutes and session credentials after fifteen minutes. Expired records are removed through regular maintenance. Per-device request-count records expire after two days; verification records are removed after approximately thirty days without use. The service uses temporary network addresses for rate limiting. Hosting infrastructure may process connection metadata, such as IP address, request time and status, under its security and operational practices. We do not use this information for advertising or cross-app tracking.</p>
+    <h2>Production hosting</h2>
+    <p>Render hosts the AI backend in Oregon, United States. It processes network connection metadata to operate and protect the service. Under the current Hobby workspace plan, application and runtime logs are available for seven days; our application does not write notes, images, drafts or credentials to these logs. Render’s infrastructure processing follows its <a href="https://render.com/privacy">privacy policy</a>.</p>
+    <p>Device verification and session metadata are stored on an encrypted persistent disk. Render takes encrypted daily disk snapshots that are available for at least seven days under its <a href="https://render.com/docs/disks">disk backup policy</a>. These snapshots contain security metadata, not job notes, photos or drafts. Deleted security metadata may remain in existing snapshots until they expire.</p>
     <h2>Deletion and retention</h2>
     <p>You can delete local jobs in the app. Deleting the app removes its local container; copies you exported remain at their chosen destinations. Create a full backup before deleting the app if you want to retain your workspace.</p>
     <p>In AI-enabled versions, Settings → Delete AI connection data sends a device-authenticated deletion request for the backend verification and session records and removes the saved connection key identifier from your device. It does not delete your local jobs, documents or purchases. A new connection is created only when you request AI again. If the service is unavailable, the app reports that deletion did not complete so you can retry.</p>
